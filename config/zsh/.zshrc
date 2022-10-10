@@ -13,7 +13,7 @@ zsh-autosuggestions
 source $ZSH/oh-my-zsh.sh
 
 export TERM=xterm-256color
-alias vimconfig="nvim ~/.config/nvim/init.vim"
+alias vimconfig="nvim ~/.config/nvim/init.lua"
 alias zshconfig="nvim ~/.zshrc"
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias showpaths="echo ${PATH//:/\\\\n}"

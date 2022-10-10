@@ -13,19 +13,14 @@ o.clipboard = 'unnamedplus'
 o.laststatus = 2
 o.updatetime = 750
 o.termguicolors = true
-
--- window-local options
-wo.number = true
-wo.cursorline = true
-wo.list = true
-wo.listchars='tab:!·,trail:·,eol:↲'
-
--- buffer-local options
-bo.textwidth = 90
-bo.expandtab = true
-bo.shiftwidth = 2
-bo.tabstop = 2
-bo.softtabstop = 2
+o.textwidth = 90
+o.expandtab = true
+o.shiftwidth = 2
+o.tabstop = 2
+o.softtabstop = 2
+o.cursorline = true
+o.list = true
+o.listchars='tab:!·,trail:·,eol:↲'
 
 -- global variables
 vim.g.lightline = {colorscheme = 'nord'}

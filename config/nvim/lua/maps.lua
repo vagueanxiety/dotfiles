@@ -34,16 +34,6 @@ vim.api.nvim_set_keymap("n", "<Leader>d", ":<C-u>CocList diagnostics<cr>", { sil
 vim.api.nvim_set_keymap("n", "<Leader>s", ":<C-u>CocList outline<cr>", { silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>S", ":<C-u>CocList -I symbols<cr>", { silent = true })
 
---- text object in code
-vim.api.nvim_set_keymap("x", "if", "<Plug>(coc-funcobj-i)", { silent = true })
-vim.api.nvim_set_keymap("o", "if", "<Plug>(coc-funcobj-i)", { silent = true })
-vim.api.nvim_set_keymap("x", "af", "<Plug>(coc-funcobj-a)", { silent = true })
-vim.api.nvim_set_keymap("o", "af", "<Plug>(coc-funcobj-a)", { silent = true })
-vim.api.nvim_set_keymap("x", "ic", "<Plug>(coc-classobj-i)", { silent = true })
-vim.api.nvim_set_keymap("o", "ic", "<Plug>(coc-classobj-i)", { silent = true })
-vim.api.nvim_set_keymap("x", "ac", "<Plug>(coc-classobj-a)", { silent = true })
-vim.api.nvim_set_keymap("o", "ac", "<Plug>(coc-classobj-a)", { silent = true })
-
 vim.api.nvim_set_keymap('n', 'K', '<CMD>lua _G.show_docs()<CR>', { silent = true })
 function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
