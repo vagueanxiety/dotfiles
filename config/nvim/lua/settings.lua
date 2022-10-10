@@ -20,11 +20,13 @@ o.tabstop = 2
 o.softtabstop = 2
 o.cursorline = true
 o.list = true
-o.listchars='tab:!·,trail:·,eol:↲'
+o.listchars = 'tab:!·,trail:·,eol:↲'
 
 -- global variables
-vim.g.lightline = {colorscheme = 'nord'}
+vim.g.lightline = { colorscheme = 'nord' }
+vim.g.nord_borders = true
+vim.g.nord_italic = false
 
--- cmds
+-- misc
 cmd('syntax on')
 cmd('colorscheme nord')
