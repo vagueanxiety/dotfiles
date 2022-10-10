@@ -5,7 +5,6 @@ require'nvim-treesitter.configs'.setup {
   },
   textobjects = {
       select = {
-        lookahead = true,
         enable = true,
         keymaps = {
           ["af"] = "@function.outer",
