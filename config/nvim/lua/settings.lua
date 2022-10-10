@@ -1,9 +1,9 @@
+local g = vim.g
 local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 local cmd = vim.cmd
 
--- global options
 o.number = true
 o.splitright = true
 o.splitbelow = true
@@ -22,12 +22,32 @@ o.cursorline = true
 o.list = true
 o.listchars = 'tab:!·,trail:·,eol:↲'
 
--- global variables
-vim.g.lightline = { colorscheme = 'nord' }
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_italic = false
+-- colorscheme
+g.nord_contrast = true
+g.nord_borders = false
+g.nord_italic = false
+cmd('colorscheme nord')
+
+-- lightline
+g.lightline = { colorscheme = 'nord' }
+
+-- fzf
+g.fzf_colors = { 
+  ['fg'] = {'fg', 'Normal'},
+  ['bg'] = {'bg', 'Normal'},
+  ['hl'] = {'fg', 'Comment'},
+  ['fg+'] = {'fg', 'CursorLine', 'CursorColumn', 'Normal'},
+  ['bg+'] = {'bg', 'CursorLine', 'CursorColumn'},
+  ['hl+'] = {'fg', 'Statement'},
+  ['info'] = {'fg', 'PreProc'},
+  ['border'] = {'fg', 'Ignore'},
+  ['prompt'] = {'fg', 'Conditional'},
+  ['pointer'] = {'fg', 'Exception'},
+  ['marker'] =  {'fg', 'Keyword'},
+  ['spinner'] = {'fg', 'Label'},
+  ['header'] =  {'fg', 'Comment'}
+}
+g.fzf_layout = { window = { width = 0.9, height = 0.9 }}
 
 -- misc
 cmd('syntax on')
-cmd('colorscheme nord')

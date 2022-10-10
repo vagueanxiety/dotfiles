@@ -11,7 +11,6 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { silent = false })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { silent = false })
 
 -- Fzf
-g.fzf_layout = { window = { width = 0.9, height = 0.9 }}
 vim.api.nvim_set_keymap('n', '<Leader>e', ':Files<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>b', ':Buffers<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>f', ':Rg<CR>', { silent = true, nowait = true})
