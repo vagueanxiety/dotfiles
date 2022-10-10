@@ -11,4 +11,6 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter-textobjects'}
   use {'ggandor/leap.nvim'}
   use {'shaunsingh/nord.nvim'}
+  use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
+  use {'fannheyward/telescope-coc.nvim'}
 end)

@@ -24,30 +24,30 @@ o.listchars = 'tab:!·,trail:·,eol:↲'
 
 -- colorscheme
 g.nord_contrast = true
-g.nord_borders = false
+g.nord_borders = true
 g.nord_italic = false
 cmd('colorscheme nord')
 
 -- lightline
 g.lightline = { colorscheme = 'nord' }
 
--- fzf
-g.fzf_colors = { 
-  ['fg'] = {'fg', 'Normal'},
-  ['bg'] = {'bg', 'Normal'},
-  ['hl'] = {'fg', 'Comment'},
-  ['fg+'] = {'fg', 'CursorLine', 'CursorColumn', 'Normal'},
-  ['bg+'] = {'bg', 'CursorLine', 'CursorColumn'},
-  ['hl+'] = {'fg', 'Statement'},
-  ['info'] = {'fg', 'PreProc'},
-  ['border'] = {'fg', 'Ignore'},
-  ['prompt'] = {'fg', 'Conditional'},
-  ['pointer'] = {'fg', 'Exception'},
-  ['marker'] =  {'fg', 'Keyword'},
-  ['spinner'] = {'fg', 'Label'},
-  ['header'] =  {'fg', 'Comment'}
-}
-g.fzf_layout = { window = { width = 0.9, height = 0.9 }}
+-- telescope
+local actions = require("telescope.actions")
+require("telescope").setup({
+  extensions = {
+    coc = {
+        prefer_locations = true,
+    }
+  },
+  defaults = {
+    mappings = {
+        i = {
+            ["<esc>"] = actions.close,
+        },
+    },
+  },
+})
+require('telescope').load_extension('coc')
 
 -- misc
 cmd('syntax on')
