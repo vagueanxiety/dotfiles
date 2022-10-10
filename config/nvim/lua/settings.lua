@@ -24,7 +24,8 @@ o.listchars = 'tab:!·,trail:·,eol:↲'
 
 -- global variables
 vim.g.lightline = { colorscheme = 'nord' }
-vim.g.nord_borders = true
+vim.g.nord_contrast = true
+vim.g.nord_borders = false
 vim.g.nord_italic = false
 
 -- misc
