@@ -21,6 +21,7 @@ o.softtabstop = 2
 o.cursorline = true
 o.list = true
 o.listchars = 'tab:!·,trail:·,eol:↲'
+o.showmode = false
 
 -- colorscheme
 g.nord_contrast = true
