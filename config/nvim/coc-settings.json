@@ -7,5 +7,9 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["rust"]
+  "[rust]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+  "rust-analyzer.checkOnSave.command": "clippy"
 }
