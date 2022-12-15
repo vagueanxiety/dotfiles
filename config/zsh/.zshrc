@@ -13,10 +13,9 @@ zsh-autosuggestions
 source $ZSH/oh-my-zsh.sh
 
 export TERM=xterm-256color
-alias vimconfig="(cd ~/.config/nvim/ && nvim init.lua)"
+alias nvconfig="(cd ~/.config/nvim/ && nvim init.lua)"
 alias zshconfig="nvim ~/.zshrc"
 alias tmuxconfig='nvim ~/.tmux.conf'
-alias showpaths="echo ${PATH//:/\\\\n}"
 alias rm="rm -i"
 
 fd() {
@@ -39,4 +38,4 @@ if [[ "$(command -v nvim)" ]]; then
     export MANWIDTH=999
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
