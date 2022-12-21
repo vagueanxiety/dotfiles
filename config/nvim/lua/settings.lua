@@ -30,7 +30,22 @@ g.nord_italic = false
 cmd('colorscheme nord')
 
 -- lightline
-g.lightline = { colorscheme = 'nord' }
+g.lightline = { 
+  colorscheme = 'nord',
+  active = {
+    right = {
+      {'lineinfo'},
+      {'percent'},
+      {'cocstatus', 'fileformat', 'fileencoding', 'filetype'}
+    }
+  },
+  component_function = {
+    cocstatus = 'coc#status'
+  }
+}
+
+-- Use autocmd to force lightline update.
+cmd [[ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update() ]]
 
 -- telescope
 local actions = require("telescope.actions")
