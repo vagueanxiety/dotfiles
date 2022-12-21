@@ -19,13 +19,24 @@ keyset('n', '<Leader>f', builtin.live_grep, {})
 keyset('n', '<Leader>F', builtin.grep_string, {})
 keyset('n', '<Leader>m', builtin.marks, {})
 keyset('n', '<Leader>M', ':Telescope man_pages sections=ALL<CR>', {})
-keyset('n', '<Leader>gd', ':Telescope coc definitions<CR>', {})
-keyset('n', '<Leader>gr', ':Telescope coc references<CR>', {})
-keyset('n', '<Leader>gi', ':Telescope coc implementations<CR>', {})
-keyset("n", "<Leader>d", ':Telescope coc diagnostics<CR>', {})
-keyset("n", "<Leader>D", ':Telescope coc workspace_diagnostics<CR>', {})
-keyset("n", "<Leader>s", ':Telescope coc document_symbols<CR>', {})
-keyset("n", "<Leader>S", ':Telescope coc workspace_symbols<CR>', {})
+
+-- sadly CTRL-I/O do not work properly within the same file using telescope-coc
+--keyset('n', '<Leader>gd', ':Telescope coc definitions<CR>', {})
+--keyset('n', '<Leader>gi', ':Telescope coc implementation<CR>', {})
+--keyset('n', '<Leader>gr', ':Telescope coc references<CR>', {})
+--keyset("n", "<Leader>s", ':Telescope coc document_symbols<CR>', {})
+--keyset("n", "<Leader>S", ':Telescope coc workspace_symbols<CR>', {})
+--keyset("n", "<Leader>d", ':Telescope coc diagnostics<CR>', {})
+--keyset("n", "<Leader>D", ':Telescope coc workspace_diagnostics<CR>', {})
+
+keyset('n', '<Leader>gd', '<Plug>(coc-definition)', {})
+keyset('n', '<Leader>gD', '<Plug>(coc-declaration)', {})
+keyset('n', '<Leader>gy', '<Plug>(coc-type-definition)', {})
+keyset('n', '<Leader>gr', '<Plug>(coc-references)', {})
+keyset('n', '<Leader>gi', '<Plug>(coc-implementation)', {})
+keyset('n', '<Leader>s', ':CocList -I -A symbols<CR>', {})
+keyset('n', '<Leader>S', ':CocList -A outline<CR>', {})
+keyset('n', '<Leader>d', ':CocList -A diagnostics<CR>', {})
 
 -- Coc
 local opts = {silent = true, nowait = true}

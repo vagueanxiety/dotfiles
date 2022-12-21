@@ -37,7 +37,7 @@ local actions = require("telescope.actions")
 require("telescope").setup({
   extensions = {
     coc = {
-        prefer_locations = true,
+        prefer_locations = false,
     }
   },
   defaults = {
