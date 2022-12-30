@@ -38,4 +38,4 @@ if [[ "$(command -v nvim)" ]]; then
     export MANWIDTH=999
 fi
 
-[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
