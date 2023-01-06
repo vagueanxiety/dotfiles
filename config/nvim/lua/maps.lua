@@ -42,6 +42,7 @@ keyset('n', '<Leader>d', ':CocList -A --normal diagnostics<CR>', {})
 local opts = {silent = true, nowait = true}
 keyset('n', '<Leader>rn', '<Plug>(coc-rename)', opts)
 keyset('x', '<Leader>a', '<Plug>(coc-codeaction-selected)', opts)
+keyset('n', '<Leader>a', '<Plug>(coc-codeaction-cursor)', opts)
 keyset('n', 'K', '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
 function _G.show_docs()
