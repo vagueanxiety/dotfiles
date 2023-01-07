@@ -7,7 +7,7 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "[rust]": {
+  "[rust][html][css]": {
     "coc.preferences.formatOnSave": true
   },
   "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
