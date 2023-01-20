@@ -36,7 +36,7 @@ keyset('n', '<Leader>gr', '<Plug>(coc-references)', {})
 keyset('n', '<Leader>gi', '<Plug>(coc-implementation)', {})
 keyset('n', '<Leader>s', ':CocList -I -A symbols<CR>', {})
 keyset('n', '<Leader>S', ':CocList -A outline<CR>', {})
-keyset('n', '<Leader>d', ':CocList -A --normal diagnostics<CR>', {})
+keyset('n', '<Leader>d', ':CocList -A diagnostics<CR>', {})
 
 -- Coc
 local opts = {silent = true, nowait = true}
