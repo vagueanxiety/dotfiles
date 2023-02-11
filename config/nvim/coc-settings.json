@@ -1,6 +1,5 @@
 {
-  "languageserver": {
-    "haskell": {
+  "languageserver": { "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": [
         "--lsp"
@@ -38,12 +37,12 @@
           "snippetSupport": true
         }
       }
-    },
-    "[rust][html][css][json]": {
-      "coc.preferences.formatOnSave": true
-    },
-    "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
-    "rust-analyzer.checkOnSave.command": "clippy",
-    "inlayHint.enable": false
-  }
+    }
+  },
+  "[rust][html][css][json]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "inlayHint.enable": false
 }
