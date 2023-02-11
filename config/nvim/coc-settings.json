@@ -2,14 +2,34 @@
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
-      "args": ["--lsp"],
-      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
-      "filetypes": ["haskell", "lhaskell"]
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ]
     },
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "filetypes": [
+        "c",
+        "cpp",
+        "cuda",
+        "objc",
+        "objcpp"
+      ],
+      "rootPatterns": [
+        ".ccls-root",
+        "compile_commands.json"
+      ],
       "initializationOptions": {
         "cache": {
           "directory": ".ccls-cache"
@@ -18,12 +38,12 @@
           "snippetSupport": true
         }
       }
-    }
-  },
-  "[rust][html][css]": {
-    "coc.preferences.formatOnSave": true
-  },
-  "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
-  "rust-analyzer.checkOnSave.command": "clippy",
-  "inlayHint.enable": false
+    },
+    "[rust][html][css][json]": {
+      "coc.preferences.formatOnSave": true
+    },
+    "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "inlayHint.enable": false
+  }
 }
