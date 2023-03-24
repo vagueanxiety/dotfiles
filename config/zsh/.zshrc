@@ -32,6 +32,13 @@ fvi() {
     nvim "$dir"
 }
 
+fgb() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune -o \
+    -print 2> /dev/null | fzf +m) &&
+    tig blame "$dir"
+}
+
 if [[ "$(command -v nvim)" ]]; then
     export EDITOR='nvim'
     export MANPAGER='nvim +Man!'
