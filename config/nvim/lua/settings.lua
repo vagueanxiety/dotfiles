@@ -75,6 +75,10 @@ require("telescope").setup({
     }
   },
   defaults = {
+    layout_config = {
+        horizontal = { width = 0.9 }
+    },
+    preview = { timeout = 1000 },
     path_display = {"truncate"},
     mappings = {
         i = {
@@ -88,3 +92,6 @@ require('telescope').load_extension('fzf')
 
 -- misc
 cmd('syntax on')
+
+-- startify
+g.startify_change_to_dir = 0
