@@ -59,6 +59,9 @@ function _G.show_docs()
     end
 end
 
+keyset('n', '<Leader>ws', [[:%s/\s\+$//e<cr>]])
+keyset('n', '<Leader>k', '*N')
+
 -- Leap.vim
 require('leap').set_default_keymaps()
 
