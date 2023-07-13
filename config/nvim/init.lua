@@ -25,6 +25,7 @@ require('packer').startup(function(use)
   use {"ellisonleao/glow.nvim"}
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {'dstein64/vim-startuptime'}
+  use {'iberianpig/tig-explorer.vim', requires = {{'rbgrouleff/bclose.vim'}}}
   --use {'nvim-treesitter/nvim-treesitter',
     --run = function()
             --local ts_update = require('nvim-treesitter.install').update({ with_sync = true })

@@ -11,10 +11,13 @@ keyset('n', '<C-k>', '<C-w>k', { silent = false })
 keyset('n', '<C-h>', '<C-w>h', { silent = false })
 keyset('n', '<C-l>', '<C-w>l', { silent = false })
 
+-- Tig
+keyset('n', '<Leader>b', ':TigBlame<CR>', {})
+keyset('n', '<Leader>t', ':Tig<CR>', {})
+
 -- Telescope
 local builtin = require('telescope.builtin')
 keyset('n', '<Leader>e', builtin.find_files, {})
-keyset('n', '<Leader>b', builtin.buffers, {})
 keyset('n', '<Leader>f', builtin.live_grep, {})
 keyset('n', '<Leader>F', builtin.grep_string, {})
 keyset('n', '<Leader>m', builtin.marks, {})
@@ -51,7 +54,7 @@ function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
     if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
         vim.api.nvim_command('h ' .. cw)
-    elseif vim.api.nvim_eval('coc#rpc#ready()') 
+    elseif vim.api.nvim_eval('coc#rpc#ready()')
       and vim.fn.CocAction('hasProvider',  'hover') then
         vim.fn.CocActionAsync('doHover')
     else
