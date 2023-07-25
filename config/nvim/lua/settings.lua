@@ -102,6 +102,7 @@ require('telescope').load_extension('fzf')
 
 -- misc
 cmd('syntax on')
+cmd "autocmd User TelescopePreviewerLoaded setlocal number"
 
 -- startify
 g.startify_change_to_dir = 0
