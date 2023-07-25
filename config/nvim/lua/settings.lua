@@ -72,7 +72,7 @@ require("telescope").setup({
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
-    }
+    },
   },
   defaults = {
     layout_config = {
@@ -85,6 +85,16 @@ require("telescope").setup({
             ["<esc>"] = actions.close,
         },
     },
+    vimgrep_arguments = {
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--fixed-strings"
+    }
   },
 })
 require('telescope').load_extension('coc')
@@ -95,3 +105,6 @@ cmd('syntax on')
 
 -- startify
 g.startify_change_to_dir = 0
+
+-- ccls
+g.ccls_close_on_jump = true

@@ -33,6 +33,7 @@ require('packer').startup(function(use)
       --end,
   --}
   --use {'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter'}
+  use {'m-pilia/vim-ccls'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

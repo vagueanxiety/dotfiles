@@ -34,6 +34,9 @@
         "cache": {
           "directory": ".ccls-cache"
         },
+        "index": {
+          "threads": 4
+        },
         "client": {
           "snippetSupport": true
         }

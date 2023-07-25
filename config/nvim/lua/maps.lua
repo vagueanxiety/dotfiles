@@ -16,12 +16,35 @@ keyset('n', '<Leader>b', ':TigBlame<CR>', {})
 keyset('n', '<Leader>t', ':Tig<CR>', {})
 
 -- Telescope
+function vim.getVisualSelection()
+	vim.cmd('noau normal! "vy"')
+	local text = vim.fn.getreg('v')
+	vim.fn.setreg('v', {})
+
+	text = string.gsub(text, "\n", "")
+	if #text > 0 then
+		return text
+	else
+		return ''
+	end
+end
+
 local builtin = require('telescope.builtin')
 keyset('n', '<Leader>e', builtin.find_files, {})
 keyset('n', '<Leader>f', builtin.live_grep, {})
 keyset('n', '<Leader>F', builtin.grep_string, {})
+keyset('v', '<Leader>G', function()
+	local text = vim.getVisualSelection()
+	builtin.live_grep({ default_text = text })
+end, {})
 keyset('n', '<Leader>m', builtin.marks, {})
 keyset('n', '<Leader>M', ':Telescope man_pages sections=ALL<CR>', {})
+keyset('n', '<leader>/', function()
+  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end, {})
 
 -- sadly CTRL-I/O do not work properly within the same file using telescope-coc
 keyset('n', '<Leader>gd', ':Telescope coc definitions<CR>', {})
@@ -49,6 +72,10 @@ keyset('n', '<Leader>rn', '<Plug>(coc-rename)', opts)
 keyset('x', '<Leader>a', '<Plug>(coc-codeaction-selected)', opts)
 keyset('n', '<Leader>a', '<Plug>(coc-codeaction-cursor)', opts)
 keyset('n', 'K', '<CMD>lua _G.show_docs()<CR>', { silent = true })
+
+-- ccls
+keyset('n', '<Leader>gc', '*N :CclsCallHierarchy<CR>', {})
+keyset('n', '<Leader>gC', ':CclsCalleeHierarchy<CR>', {})
 
 function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
