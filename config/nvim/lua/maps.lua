@@ -12,7 +12,7 @@ keyset('n', '<C-h>', '<C-w>h', { silent = false })
 keyset('n', '<C-l>', '<C-w>l', { silent = false })
 
 -- Tig
-keyset('n', '<Leader>b', ':TigBlame<CR>', {})
+keyset('n', '<Leader>bl', ':TigBlame<CR>', {})
 keyset('n', '<Leader>t', ':Tig<CR>', {})
 
 -- Telescope
@@ -30,6 +30,7 @@ function vim.getVisualSelection()
 end
 
 local builtin = require('telescope.builtin')
+keyset('n', '<Leader>bu', builtin.buffers, {})
 keyset('n', '<Leader>e', builtin.find_files, {})
 keyset('n', '<Leader>f', builtin.live_grep, {})
 keyset('n', '<Leader>F', builtin.grep_string, {})
