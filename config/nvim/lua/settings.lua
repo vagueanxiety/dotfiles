@@ -31,7 +31,6 @@ g.nord_borders = true
 g.nord_italic = false
 cmd('colorscheme nord')
 
-
 -- For C and C++, use Kernel indentation style
 augroup('setIndent', { clear = true })
 autocmd('Filetype', {
