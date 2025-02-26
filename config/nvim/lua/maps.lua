@@ -72,7 +72,6 @@ local opts = {silent = true, nowait = true}
 keyset('n', '<Leader>rn', '<Plug>(coc-rename)', opts)
 keyset('x', '<Leader>a', '<Plug>(coc-codeaction-selected)', opts)
 keyset('n', '<Leader>a', '<Plug>(coc-codeaction-cursor)', opts)
-keyset('n', 'K', '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
 -- ccls
 keyset('n', '<Leader>gc', '*N :CclsCallHierarchy<CR>', {})
@@ -90,8 +89,10 @@ function _G.show_docs()
     end
 end
 
+keyset('n', 'K', '<CMD>lua _G.show_docs()<CR>', { silent = true })
 keyset('n', '<Leader>ws', [[:%s/\s\+$//e<cr>]])
-keyset('n', '<Leader>k', '*N')
+keyset('n', '<Leader>q', '*N')
+keyset('x', '<Leader>/', '<ESC>/\\%V')
 
 -- Leap.vim
 require('leap').set_default_keymaps()

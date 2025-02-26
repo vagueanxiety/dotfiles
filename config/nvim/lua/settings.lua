@@ -64,6 +64,7 @@ require("telescope").setup({
   extensions = {
     coc = {
         prefer_locations = false,
+        push_cursor_on_edit = true,
     },
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -83,6 +84,7 @@ require("telescope").setup({
     mappings = {
         i = {
             ["<esc>"] = actions.close,
+            ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
         },
     },
     vimgrep_arguments = {

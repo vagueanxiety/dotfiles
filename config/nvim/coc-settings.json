@@ -46,7 +46,8 @@
   "[rust][html][css][json]": {
     "coc.preferences.formatOnSave": true
   },
-  "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
-  "rust-analyzer.checkOnSave.command": "clippy",
-  "inlayHint.enable": false
+  "inlayHint.enable": false,
+  "zig.zls.enabled": true,
+  "zig.zls.checkForUpdate": false,
+  "zig.zls.path": "/usr/bin/zls"
 }

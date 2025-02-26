@@ -27,13 +27,13 @@ require('packer').startup(function(use)
   use {'dstein64/vim-startuptime'}
   use {'iberianpig/tig-explorer.vim', requires = {{'rbgrouleff/bclose.vim'}}}
   use {'m-pilia/vim-ccls'}
-  use {'nvim-treesitter/nvim-treesitter',
+  --[[use {'nvim-treesitter/nvim-treesitter',
     run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
       end,
   }
-  use {'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter'}
+  use {'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter'}]]
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -43,5 +43,5 @@ require('packer').startup(function(use)
 end)
 
 require('settings')
-require('treesitter')
+--require('treesitter')
 require('maps')
