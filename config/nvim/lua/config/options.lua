@@ -3,6 +3,7 @@ local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 local cmd = vim.cmd
+local opt = vim.opt
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -24,6 +25,7 @@ o.cursorline = true
 o.list = true
 o.listchars = 'tab:!·,trail:·,eol:↲'
 o.showmode = false
+opt.colorcolumn = "80"
 
 -- For C and C++, use Kernel indentation style
 augroup('setIndent', { clear = true })

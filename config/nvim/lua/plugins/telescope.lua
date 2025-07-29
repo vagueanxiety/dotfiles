@@ -27,7 +27,7 @@ return {
     branch = "0.1.x",
     dependencies = {
       { "nvim-lua/plenary.nvim" },
-      { 
+      {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
       },
@@ -37,6 +37,9 @@ return {
       local actions = require("telescope.actions")
       require("telescope").setup({
         extensions = {
+          coc = {
+              prefer_locations = false,
+          },
           fzf = {
             fuzzy = true,                    -- false will only do exact matching
             override_generic_sorter = true,  -- override the generic sorter
@@ -47,8 +50,12 @@ return {
         },
         defaults = {
           sorting_strategy = "ascending",
+          layout_strategy = "vertical",
           layout_config = {
-              horizontal = { width = 0.9 }
+            vertical = {
+              width = 0.9,
+              preview_height = 0.7,
+            }
           },
           preview = { timeout = 1000 },
           path_display = {"truncate"},

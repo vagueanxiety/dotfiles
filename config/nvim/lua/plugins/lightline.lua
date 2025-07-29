@@ -8,9 +8,12 @@ return {
           right = {
             {'lineinfo'},
             {'percent'},
-            {'fileformat', 'fileencoding', 'filetype'},
+            {'cocstatus', 'fileformat', 'fileencoding', 'filetype'},
           }
         },
+        component_function = {
+          cocstatus = 'coc#status',
+        }
       }
     end,
   },
