@@ -47,6 +47,6 @@
     "coc.preferences.formatOnSave": true
   },
   "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
-  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.check.command": "clippy",
   "inlayHint.enable": false
 }
