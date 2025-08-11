@@ -7,7 +7,7 @@ return {
       vim.cmd [[ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update() ]]
     end,
     dependencies = {
-      { 
+      {
         "fannheyward/telescope-coc.nvim",
         config = function ()
           local keyset = vim.keymap.set
@@ -20,6 +20,7 @@ return {
           keyset("n", "<Leader>s", ':Telescope coc document_symbols<CR>', {})
           keyset("n", "<Leader>d", ':Telescope coc diagnostics<CR>', {})
           keyset("n", "<Leader>D", ':Telescope coc workspace_diagnostics<CR>', {})
+          keyset('n', '<Leader>rn', '<Plug>(coc-rename)', opts)
 
           --keyset('n', '<Leader>gd', '<Plug>(coc-definition)', {})
           --keyset('n', '<Leader>gD', '<Plug>(coc-declaration)', {})
